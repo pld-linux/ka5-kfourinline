@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kfourinline
 Summary:	kfourinline
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	c9e12a8e392bb2cea6607017fbcd4c6e
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	6461ea603e1d6067a50a6acde94f96ac
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -67,7 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/kfourinline.categories
 %attr(755,root,root) %{_bindir}/kfourinline
 %attr(755,root,root) %{_bindir}/kfourinlineproc
 %{_desktopdir}/org.kde.kfourinline.desktop
@@ -80,3 +79,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/64x64/apps/kfourinline.png
 %{_datadir}/kfourinline
 %{_datadir}/metainfo/org.kde.kfourinline.appdata.xml
+%{_datadir}/qlogging-categories5/kfourinline.categories
