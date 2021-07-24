@@ -43,6 +43,11 @@ KFourInLine is a board game for two players based on the Connect-Four
 game. The players try to build up a row of four pieces using different
 strategies.
 
+%description -l pl.UTF-8
+KFourInLine jest grą planszową dla dwóch graczy opartą na grze
+Connect-Four (Połącz-Cztery). Gracze starają się zbudować rząd składający
+się z czterech elementów używając różnych strategii.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
